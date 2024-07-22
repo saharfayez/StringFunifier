@@ -1,18 +1,17 @@
 package main;
 
- public class CompressionOperation extends OperationDecorator {
+public class CompressionOperation extends OperationDecorator {
 
 
+    public CompressionOperation(Operation operation) {
+        super(operation);
+    }
 
-     public CompressionOperation(Operation operation) {
-         super(operation);
-     }
-
-     @Override
+    @Override
     public StringBuilder transform(StringBuilder substring) {
 
         String s2 = substring.toString();
-        substring=super.transform(substring);
+        substring = super.transform(substring);
         substring.setLength(0);
         int count = 1;
         char[] chars = s2.toCharArray();

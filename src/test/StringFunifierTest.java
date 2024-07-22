@@ -4,6 +4,7 @@ import main.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -12,7 +13,7 @@ class StringFunifierTest {
 
 
     @Test
-    void getStringFunifier() {
+    void getStringFunifier() throws InterruptedException, ExecutionException {
         String string= "ccchHJKkklmlmmml";
         String stringExpected = "c(1h2c)H(J)K(k2l1m1)(l1m1)(2M)l";
 
