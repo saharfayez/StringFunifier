@@ -1,4 +1,6 @@
-package main;
+package main.stringfunifier;
+import main.interafces.Operation;
+
 import java.util.*;
 import java.util.concurrent.*;
 public class StringFunifier {
@@ -49,7 +51,6 @@ public class StringFunifier {
         for (int i = 0; i < startIndexes.size(); i++) {
             int start = startIndexes.get(i);
             int end = endIndexes.get(i);
-//
             StringBuilder boringSubString = new StringBuilder(boringString.substring(start, end + 1));
             int finalI1 = i;
             callables.add(new Callable<StringBuilder>() {

@@ -1,6 +1,9 @@
-package main;
+package main.operations;
 
- public class UpperCaseOperation extends  OperationDecorator {
+import main.interafces.Operation;
+import main.interafces.Impl.OperationDecorator;
+
+public class UpperCaseOperation extends OperationDecorator {
 
 
 
@@ -9,7 +12,7 @@ package main;
      }
 
      @Override
-    public StringBuilder transform(StringBuilder substring) {
+    public StringBuilder transform(StringBuilder substring) throws InterruptedException {
 
          substring=super.transform(substring);
 

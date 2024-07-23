@@ -1,6 +1,6 @@
-package main;
+package main.interafces.Impl;
 
-import java.util.List;
+import main.interafces.Operation;
 
 public abstract class OperationDecorator implements Operation {
 
@@ -14,7 +14,7 @@ public abstract class OperationDecorator implements Operation {
     }
 
     @Override
-    public StringBuilder transform(StringBuilder substring) {
+    public StringBuilder transform(StringBuilder substring) throws InterruptedException {
         return operation.transform(substring);
     }
 }

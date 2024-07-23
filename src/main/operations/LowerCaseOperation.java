@@ -1,4 +1,7 @@
-package main;
+package main.operations;
+
+import main.interafces.Operation;
+import main.interafces.Impl.OperationDecorator;
 
 public class LowerCaseOperation extends OperationDecorator {
 
@@ -9,7 +12,8 @@ public class LowerCaseOperation extends OperationDecorator {
 
 
     @Override
-    public StringBuilder transform(StringBuilder substring) {
+    public StringBuilder transform(StringBuilder substring) throws InterruptedException {
+        Thread.sleep(1000);
         substring=super.transform(substring);
 
         for (int i = 0; i < substring.length(); i++) {

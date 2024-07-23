@@ -1,4 +1,7 @@
-package main;
+package main.operations;
+
+import main.interafces.Operation;
+import main.interafces.Impl.OperationDecorator;
 
 public class CompressionOperation extends OperationDecorator {
 
@@ -8,7 +11,7 @@ public class CompressionOperation extends OperationDecorator {
     }
 
     @Override
-    public StringBuilder transform(StringBuilder substring) {
+    public StringBuilder transform(StringBuilder substring) throws InterruptedException {
 
         String s2 = substring.toString();
         substring = super.transform(substring);

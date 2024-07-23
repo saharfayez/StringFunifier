@@ -1,6 +1,12 @@
 package test;
 
-import main.*;
+import main.interafces.Impl.BaseClass;
+import main.interafces.Operation;
+import main.operations.CompressionOperation;
+import main.operations.ReverseOperation;
+import main.operations.SortingOperation;
+import main.operations.UpperCaseOperation;
+import main.stringfunifier.StringFunifier;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

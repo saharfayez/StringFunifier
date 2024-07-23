@@ -1,11 +1,16 @@
 package main;
 
+import main.interafces.Impl.BaseClass;
+import main.interafces.Operation;
+import main.operations.CompressionOperation;
+import main.operations.ReverseOperation;
+import main.operations.SortingOperation;
+import main.operations.UpperCaseOperation;
+import main.stringfunifier.StringFunifier;
+
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 
 public class Main {
@@ -13,7 +18,7 @@ public class Main {
 
 
         Scanner scanner = new Scanner(System.in);
-        String boringString = scanner.next();
+        String boringString = "ccchHJKkklmlmmml";
 
         List<Integer> startIndexes = List.of(1, 5, 7, 11, 13);
         List<Integer> endIndexes = List.of(3, 5, 10, 12, 14);
