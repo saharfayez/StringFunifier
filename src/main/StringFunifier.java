@@ -1,10 +1,7 @@
 package main;
-
 import java.util.*;
 import java.util.concurrent.*;
-
 public class StringFunifier {
-
 
     String boringString;
     List<Integer> startIndexes = new ArrayList<>();
@@ -17,8 +14,6 @@ public class StringFunifier {
         this.startIndexes = startIndexes;
         this.endIndexes = endIndexes;
         this.funOperations = funOperations;
-
-
     }
 
     public String getStringFunifier() throws InterruptedException, ExecutionException {
@@ -47,34 +42,26 @@ public class StringFunifier {
 
     public List<Future<StringBuilder>> startThreadsForOperations() throws InterruptedException {
 
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        ExecutorService executorService = Executors.newFixedThreadPool(5);
 
-        Vector<Callable<StringBuilder>> callables = new Vector<Callable<StringBuilder>>(5);
+        Vector<Callable<StringBuilder>> callables = new Vector<Callable<StringBuilder>>();
+
         for (int i = 0; i < startIndexes.size(); i++) {
             int start = startIndexes.get(i);
             int end = endIndexes.get(i);
-
+//
             StringBuilder boringSubString = new StringBuilder(boringString.substring(start, end + 1));
-
-
             int finalI1 = i;
             callables.add(new Callable<StringBuilder>() {
                 public StringBuilder call() throws Exception {
                     StringBuilder result = funOperations.get(finalI1).transform(boringSubString);
                     return result;
-
                 }
             });
-
-
         }
-        java.util.List<Future<StringBuilder>> futures = executorService.invokeAll((callables));
+        java.util.List<Future<StringBuilder>> futures = executorService.invokeAll(callables);
         executorService.shutdown();
-
         return futures;
-
     }
-
-
 }
 

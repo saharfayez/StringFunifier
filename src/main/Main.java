@@ -26,7 +26,12 @@ public class Main {
 
         );
         StringFunifier sd = new StringFunifier(boringString, startIndexes, endIndexes, funOperations);
+        long startTime = System.currentTimeMillis();
+        System.out.println("Time Before Execution : " + startTime);
         System.out.println(sd.getStringFunifier());
+        long endTime = System.currentTimeMillis();
+        System.out.println("Time After Execution  : " + endTime);
+        System.out.println("Total Execution Time  : " + (endTime - startTime));
 
     }
 
