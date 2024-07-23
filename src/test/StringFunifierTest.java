@@ -1,7 +1,7 @@
 package test;
 
-import main.interafces.Impl.BaseClass;
-import main.interafces.Operation;
+import main.interfaces.Impl.BaseClass;
+import main.interfaces.Operation;
 import main.operations.CompressionOperation;
 import main.operations.ReverseOperation;
 import main.operations.SortingOperation;

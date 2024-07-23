@@ -1,5 +1,5 @@
 package main.stringfunifier;
-import main.interafces.Operation;
+import main.interfaces.Operation;
 
 import java.util.*;
 import java.util.concurrent.*;

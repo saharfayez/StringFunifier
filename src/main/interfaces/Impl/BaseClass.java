@@ -1,6 +1,6 @@
-package main.interafces.Impl;
+package main.interfaces.Impl;
 
-import main.interafces.Operation;
+import main.interfaces.Operation;
 
 public class BaseClass implements Operation {
 

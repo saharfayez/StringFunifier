@@ -1,4 +1,4 @@
-package main.interafces;
+package main.interfaces;
 
 public interface Operation   {
 

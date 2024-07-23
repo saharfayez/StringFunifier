@@ -1,7 +1,7 @@
 package main.operations;
 
-import main.interafces.Operation;
-import main.interafces.Impl.OperationDecorator;
+import main.interfaces.Operation;
+import main.interfaces.Impl.OperationDecorator;
 
 public class CompressionOperation extends OperationDecorator {
 
